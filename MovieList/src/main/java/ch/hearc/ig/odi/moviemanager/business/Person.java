@@ -17,7 +17,7 @@ public class Person {
     private Long id;
     private String prenom;
     private String nom;
-    private List<Movie> movieList;
+    private final List<Movie> movieList;
 
     public Person(Long id, String prenom, String nom) {
         this.id = id;
@@ -57,7 +57,13 @@ public class Person {
     public void removeMovie(Movie m) {
         movieList.remove(m);
     }
-   
+
+    public List<Movie> getMovieList() {
+        return  movieList;
+    }
+    
+    
+    
     public int getSizeMovieList(){
         return movieList.size();
     }

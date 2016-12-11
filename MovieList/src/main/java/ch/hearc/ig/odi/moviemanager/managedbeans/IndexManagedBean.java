@@ -39,4 +39,12 @@ public class IndexManagedBean {
     public List<Movie> getMovieList() {
         return services.getMoviesList();
     }
+    
+    public int getMovieNumber(int movieId){
+        return services.getNumberOwner(movieId);
+    }
+    
+    
+    
+      
 }
