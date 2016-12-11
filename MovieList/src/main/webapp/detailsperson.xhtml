@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>#{label.movie_manager_detailspersonn_title}</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="/main.xhtml">
+            <ui:define name="top"> </ui:define>
+            <ui:define name="css">
+                <h:outputStylesheet name="css/pages/index.css"/>
+            </ui:define>
+            <ui:define name="content">
+                <h:panelGroup rendered="#{personManagedBeans.personn != null}">
+                    <h:panelGroup layout="block">
+                        <p>
+                            <h:outputText value="#{label.person_id}" /> :  <h:outputText value="#{personManagedBeans.personn.id}"  />
+                        </p> 
+                    </h:panelGroup>
+                    <h:panelGroup layout="block">
+                        <p>
+                            <h:outputText value="#{label.person_surname}" />  :  <h:outputText value="#{personManagedBeans.personn.prenom}"  />
+                        </p>
+                    </h:panelGroup>
+                    <h:panelGroup layout="block">
+                        <p>
+                            <h:outputText value="#{label.person_name}" />  :  <h:outputText value="#{personManagedBeans.personn.nom}"  />
+                        </p>
+                    </h:panelGroup>
+
+                </h:panelGroup>
+                <h:panelGroup rendered="#{personManagedBeans.personn == null}">
+                    <p>
+                        Aucune donnée correspondante à l'ID fourni en paramétre
+                    </p>
+                </h:panelGroup>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
+
