@@ -57,5 +57,9 @@ public class Person {
     public void removeMovie(Movie m) {
         movieList.remove(m);
     }
-
+   
+    public int getSizeMovieList(){
+        return movieList.size();
+    }
+    
 }
