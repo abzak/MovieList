@@ -6,7 +6,7 @@
  <application>
         <resource-bundle>
             <base-name>label</base-name>
-            <var>lb</var>
+            <var>label</var>
         </resource-bundle>
         <locale-config>
             <default-locale>fr</default-locale>

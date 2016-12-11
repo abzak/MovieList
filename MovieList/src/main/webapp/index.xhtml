@@ -5,13 +5,16 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:p="http://primefaces.org/ui">
     <h:head>
-        <title>#{label.titre_index}</title>
+        <title>#{l.titre_index}</title>
     </h:head>
     <h:body>
         <ui:composition template="/main.xhtml">
             <ui:define name="top"> </ui:define>
+            <ui:define name="css">
+                   <h:outputStylesheet name="css/pages/index.css"/>
+            </ui:define>
             <ui:define name="content">
-                <h:panelGroup id="personListGroup">
+                <h:panelGroup id="personListGroup" layout="block"  >
                     <h1>#{label.index_title_list_person}</h1>
                     <p:dataTable var="p" value="#{indexManagedBean.personList}">
                         <p:column headerText="#{label.person_id}">
@@ -31,9 +34,9 @@
                         </p:column>
                     </p:dataTable>
                 </h:panelGroup>
-                <h:panelGroup id="movieListGroup">
-                    <h1>#{label.index_title_list_person}</h1>
-                    <p:dataTable var="p" value="#{indexManagedBean.personList}">
+                <h:panelGroup id="movieListGroup"  layout="block" >
+                    <h1>#{label.index_title_list_movies}</h1>
+                    <p:dataTable var="m" value="#{indexManagedBean.movieList}">
                         <p:column headerText="#{label.person_id}">
                             <h:outputText value="#{p.id}" />
                         </p:column>
