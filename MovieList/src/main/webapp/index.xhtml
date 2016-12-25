@@ -39,28 +39,7 @@
                                 <h:outputText value="#{p.sizeMovieList}" />
                             </p:column>
                         </p:dataTable>
-                    </h:panelGroup>
-                    <h:panelGroup id="movieListGroup"  layout="block" >
-                        <h1>#{label.index_title_list_movies}</h1>
-                        <p:dataTable var="m" value="#{indexManagedBean.movieList}">
-                            <p:column headerText="#{label.movie_id}">
-                                <h:outputText value="#{m.id}" />
-                            </p:column>
-
-                            <p:column headerText="#{label.movie_name}">
-                                <h:outputText value="#{m.titre}" />
-                            </p:column>
-
-                            <p:column headerText="#{label.movie_produced}">
-                                <h:outputText value="#{m.auteur}" />
-                            </p:column>
-
-                            <p:column headerText="#{label.movie_sizePeople}">
-                                <h:outputText value="#{indexManagedBean.getMovieNumber(m.id)}" />
-                            </p:column>
-                        </p:dataTable>
-
-                    </h:panelGroup>
+                    </h:panelGroup> 
                 </h:form>
             </ui:define>
         </ui:composition>
